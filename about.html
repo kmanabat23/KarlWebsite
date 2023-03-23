@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel ="stylesheet" href="styles.css">
+</head>
+<body>
+    <body class="page-top">
+        <header class="header">
+            <a class="logo" href="https://vsco.co/kmanabat/gallery">Karl Manabat</a>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <ul class="menu">
+              <li><a href="index.html" class="link link-theme link-arrow">HOME</a></li>
+              <li><a href="about.html" class="link link-theme link-arrow">About Me</a></li>
+              <li><a href="contact.html" class="link link-theme link-arrow">Contact</a></li>
+              <li><a href="store.html" class="link link-theme link-arrow">Store</a></li>
+              <li><a href="work.html" class="link link-theme link-arrow">Work</a></li>
+            </ul>
+          </header>
+        <div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/me.JPG">
+                </div>    
+                <div class="about-col-2">
+                    <h1 class="title">About Me</h1>
+                    <p>
+                        Hello! My name is Karl Manabat!
+                        I have a passion for the fields of science and technology with deep interest in exploring and learning more about these areas. I am always looking for opportunities to grow and develop as a professional! <br> <br>
+                        In addition to my professional interests, enjoy playing video games and going to the gym. I also have an interest in photography and capturing the beauty of the world around me!  
+                    </p>
+                    <!--Provides more info about me when clicked -->
+                    <div class = "tab-title">
+                        <p class = "tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class = "tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class = "tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                     <!--Skills-->
+                    <div class = "tab-content active-tab" id="skills">
+                        <ul>
+                            <li><span>Java</span><br>Object Oriented Programming</li>
+                            <li><span>Python</span><br>Data Analysis</li>
+                            <li><span>HTML/CSS</span><br>Website Development</li>
+                            <li><span>Tableau/PowerBI</span><br>Data Analysis and Data Visualization</li>
+                        </ul>
+                    <!--Experience -->
+                    </div>
+                    <div class = "tab-content" id="experience">
+                        <ul>
+                            <li><span>2022 - Present</span><br>Johnson and Johnson: Business Analyst</li>
+                            <li><span>2022</span><br>Johnson and Johnson: Operations Intern</li>
+                        </ul>
+                    </div>
+                     <!--Education-->
+                    <div class = "tab-content" id="education">
+                        <ul>
+                            <li><span>2019 - 2023</span><br>Kean University<br>Major: Biology<br>Minor: Computer Science</li>
+                        </ul>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </div>
+
+<!--Removes the tab content when clicked and shows the tab that is being clicked -->
+<script>
+    var tablinks= document.getElementsByClassName("tab-links");
+    var tabcontent = document.getElementsByClassName("tab-content");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabconten of tabcontent){
+            tabconten.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+  <!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+      <hr>
+      <article class="foot-content-left">
+        <ul>&copy;By: Karl Manabat</ul>
+      </article>
+      <article class="foot-content">
+        <ul>
+            <li><a href="contact.html">manabaka@kean.edu</a></li>
+          <li class="social"><a href="https://www.linkedin.com/in/karl-manabat-b397241a6/">LinkedIn</a></li>
+        </ul>
+      </article>
+    </div>
+  </footer>
+</body>
+</html>
